@@ -53,7 +53,17 @@
             var $menuItems = $("#tabMenu1 li");
             var $preItem = null;
 
-            var timerID = ;
+            var timerID = setInterval(function(){
+                if($preItem != null)
+                    $preItem.removeClass("select");
+                var $item = $menuItems.eq(currentIndex);
+                $item.addClass("select");
+                $preItem = $item;
+                currentIndex++;
+                if(currentIndex >= $menuItems.length)
+                    clearInterval(timerID);
+                    
+            }, 1000);
         });
     </script>
 </head>

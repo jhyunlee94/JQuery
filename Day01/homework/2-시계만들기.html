@@ -54,7 +54,7 @@
                 var seconds = addZero(objDate.getSeconds());
 
                 var time = hours + ":" + minutes + ":" + seconds;
-
+                $clock.text(time);
             }
 
             // 시작하자마 시간 출력
@@ -62,7 +62,7 @@
 
             // 1초마다 시간 출력
             setInterval(function () {
-
+                showTime();
             }, 1000)
         }
 
