@@ -17,7 +17,10 @@
     <a href="http://www.naver.com" id="btn">네이버</a>
     <div></div>
     <script>
-        $("#btn").on("click", function(){
+        //클릭 이벤트를 매개변소로 받음
+        $("#btn").on("click", function(e){
+            //a 태그 클릭 시 이동되는 하이퍼링크 기능을 막아줌
+            e.preventDefault();
             $("div").css("background", "green");
         });
     </script>
