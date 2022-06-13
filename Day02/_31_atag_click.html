@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a태그와 click()</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com" id="btn">네이버</a>
+    <div></div>
+    <script>
+        $("#btn").on("click", function(){
+            $("div").css("background", "green");
+        });
+    </script>
+</body>
+</html>
